@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<title>Appointment page</title>
+<link rel="stylesheet" href="style2.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script>
+ function alertmsg()
+{
+  let x=document.forms["myform"]["fullname"].value;
+  let y=document.forms["myform"]["email"].value;
+  if(x==""&y=="")
+{
+    alert("field must be filled out");
+    return false;
+}
+  else
+{
+    alert("your appointment is sent to your prescribed test'SO PLEASE WAIT FOR RESULT'");
+    
+}
+}
+</script>
+</head>
+<body>
+  <div class="wrapper">
+  <form name="myform" action="view.html" method="post">
+   <h1>GET APPOINTMENT</h1>
+
+     <div class="input-box">
+         <div class="input-field">
+        <input type="text" placeholder="Full name"name="fullname"required>
+       <i class='bx bxs-user'></i>
+        </div>
+
+         <div class="input-field">
+        <input type="number" placeholder="Phone Number" required>
+      <i class='bx bxs-phone' ></i>
+     </div>
+</div>
+
+
+  <div class="input-box">
+ <div class="input-field">
+        <input type="email" placeholder="Email" name="email"required>
+<i class='bx bxs-envelope'></i>
+     </div>
+
+         <div class="input-field">
+        <input type="date" placeholder="Date" required>
+<i class='bx bxs-calendar-plus'></i>
+     </div>
+</div>
+
+      <div class="input-box">
+         <div class="input-field">
+        <input type="text" placeholder="Area" required>
+<i class='bx bxs-area' ></i>
+     </div>
+         <div class="input-field">
+        <input type="text" placeholder="Doctor name" required>
+<i class='bx bx-plus-medical'></i>
+     </div>
+</div>
+
+<label><input type="checkbox">I hereby declare that the above information provided is true and correct</label>
+
+<button type="submit" class="btn" onclick="alertmsg()">Get Appointment</button>
+
+
+</form>
+</div>
+</body>
+</html>
